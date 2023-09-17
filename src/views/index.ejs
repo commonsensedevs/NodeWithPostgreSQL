@@ -1,11 +1,14 @@
-<html>
-    <body>
-        <h1>Welcome to <%=title%></h1>
-        
-    <% data.map((i) => {
-        %><li><%=i.name %> <%=i.gender %></li><%
-    });
-    
-    %>
-    </body>
+<head>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <h1>Welcome to <%=title%>
+    </h1>
+</head>
+
+<body>
+    <div class="container">
+        <a class="nav-link" href="sessions">Sessions</a>
+    </div>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
 </html>
