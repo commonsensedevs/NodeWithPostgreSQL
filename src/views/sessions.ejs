@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Session</title>
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+   <div>
+    <% sessions.map((session, index) => { %>
+    
+        <h3><%= session.title %></h3>
+        <p><%= session.description %></p>
+        <a href="/sessions/<%= index %>">View</a>
+
+   <%}) %>
+   </div>
+   
+</body>
+</html>

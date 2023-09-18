@@ -4,20 +4,14 @@ const path = require('path');
 const app = express();
 const ejs = require('ejs');
 const port = 3000;
-const sessionRouter = express.Router();
-
+const sessionRouter = require('./src/routers/sessionRouter');
+const sessions = require('./src/data/sessions.json');
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('views', './src/views');
 app.set('view engine', 'ejs');
 
-sessionRouter.route('/').get((req, res) => {
-    res.send('Routing successful');
-});
 
-sessionRouter.route('/1').get((req, res) => {
-    res.send('Single session routing successful');
-});
 
 app.use('/sessions', sessionRouter);
 
