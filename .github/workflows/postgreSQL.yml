@@ -1,9 +1,7 @@
 name: PostgreSQL Service Container
 
 on: 
-  push:
-    branches: 
-      - main
+  workflow_dispatch:
 
 jobs:
   build:
@@ -28,3 +26,8 @@ jobs:
         context: .
         push: true
         tags: gomtimehta1/postgres_service:latest
+
+    - name: Deploy and Initialize PostgreSQL
+      run: |
+          docker pull gomtimehta1/postgres_service:latest
+          docker run -d -p 5432:5432 gomtimehta1/postgres_service:latest       
