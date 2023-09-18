@@ -27,4 +27,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: your_dockerhub_username/postgres_service:latest
+        tags: gomtimehta1/postgres_service:latest
