@@ -18,8 +18,8 @@ class sessionRepository {
 
     async getSessionById(id) {
         try {
-            const result = await this.db.query('SELECT * FROM sessions WHERE id = $1', [id]);
-            return result.rows[0];
+            const result = await this.db.query('SELECT * FROM sessions WHERE id = $1', [id+1]);
+            return result.rows[id];
 
         } catch (err) {
             console.error(err);

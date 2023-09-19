@@ -1,10 +1,10 @@
 CREATE TABLE sessions (
     id SERIAL PRIMARY KEY,
     title text NOT NULL,
-    sessionDescription text
+    [description] text
 );
 
-INSERT INTO sessions (title, sessionDescription)
+INSERT INTO sessions (title, [description])
 VALUES 
 ('Session 1', 'Description 1'),
 ('Session 2', 'Description 2');
