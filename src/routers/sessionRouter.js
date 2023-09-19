@@ -1,8 +1,11 @@
 const express = require('express');
 const sessionRouter = express.Router();
-const pool = require('../data/database');
+//const pool = require('../data/database');
+const containerDatabase = require('../data/containerDatabase');
+
 const SessionRepository = require('../data/sessionRepository');
-const sessionRepository = new SessionRepository(pool);
+//const sessionRepository = new SessionRepository(pool);
+const sessionRepository = new SessionRepository(containerDatabase);
 
 sessionRouter.route('/').get(async(req, res) => {
     try {

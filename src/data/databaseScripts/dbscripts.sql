@@ -4,7 +4,7 @@ CREATE TABLE sessions (
     sessionDescription text
 );
 
-INSERT INTO users (title, sessionDescription)
+INSERT INTO sessions (title, sessionDescription)
 VALUES 
 ('Session 1', 'Description 1'),
 ('Session 2', 'Description 2');

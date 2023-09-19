@@ -12,7 +12,8 @@ class sessionRepository {
             console.error(err);
             res.status(500).send('Server error');
         }
-
+        //close the connection
+        await this.db.end();
     }
 
     async getSessionById(id) {
@@ -24,6 +25,8 @@ class sessionRepository {
             console.error(err);
             res.status(500).send('Server error');
         }
+          //close the connection
+          await this.db.end();
     }
 
     async createSession(session) {
